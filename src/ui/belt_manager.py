@@ -128,8 +128,9 @@ class BeltManager:
         img = self._screen.grab()
         template_match = self._template_finder.search("MISCHA_BORDER", img, best_match=True, roi=[715, 554, 186, 15], threshold=0.5, use_grayscale=True)
         if template_match.valid:
-            print("Matched 4 rows")
+            # print("Matched 4 rows")
             self.belt_rows = 4
+            print(f"My number of rows is: {self.belt_rows}")
         else:
             print(f"My number of rows is: {self.belt_rows}")
         
